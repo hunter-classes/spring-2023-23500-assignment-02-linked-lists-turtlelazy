@@ -1,7 +1,16 @@
-main: main.o List.o Node.o
-	g++ -o main main.o List.o Node.o
+OBJECTS=main.o List.o Node.o
+CXXFLAGS=
+LDFLAGS= 
+CXX=g++
 
-List.o: List.cpp List.h
-	g++ -c -std=c++11 List.cpp
+main: main.o List.o Node.o
+	$(CXX) -o main $(OBJECTS)
+
+main.o: main.cpp List.h
+
+List.o: List.cpp List.h Node.h
+
 Node.o: Node.cpp Node.h
-	g++ -c -std=c++11 Node.cpp
+
+clean:
+	rm -f $(OBJECTS)
