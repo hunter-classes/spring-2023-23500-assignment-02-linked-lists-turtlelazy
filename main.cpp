@@ -8,6 +8,9 @@ int main(){
     l1->insert("b");
     l1->insert("c");
 
-    std::cout << l1->toString() << "\n";
+    std::cout << "Print linked list: " << l1->toString() << "\n";
+    std::cout << "Contains 'a': " << l1->contains("a") << "\n";
+    std::cout << "Contains 'd': " << l1->contains("d") << "\n";
     
+
 }

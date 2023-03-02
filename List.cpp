@@ -24,3 +24,24 @@ std::string List::toString(){
     s = s + "nullptr";
     return s;    
 }
+
+bool List::contains(std::string item){
+    Node *walker = head;
+    while (walker != nullptr)
+    {
+        if(walker->getData() == item){
+            return true;
+        }
+        walker = walker->getNext();
+    }
+    return false;
+}
+
+void List::remove(int loc){
+    Node *walker = head;
+    int iter = 0;
+    while(iter < loc && walker->getNext() != nullptr){
+        
+    }
+}
+
