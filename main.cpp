@@ -11,6 +11,12 @@ int main(){
     std::cout << "Print linked list: " << l1->toString() << "\n";
     std::cout << "Contains 'a': " << l1->contains("a") << "\n";
     std::cout << "Contains 'd': " << l1->contains("d") << "\n";
-    
 
+    l1->insert("d");
+    l1->insert("e");
+    std::cout << "Print linked list: " << l1->toString() << "\n";
+    l1->remove(0);
+    std::cout << "Remove first element: " << l1->toString() << "\n";
+    l1->remove(1);
+    std::cout << "Remove second element: " << l1->toString() << "\n";
 }
