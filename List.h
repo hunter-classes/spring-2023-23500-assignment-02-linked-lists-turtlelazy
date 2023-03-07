@@ -10,6 +10,7 @@ class List{
 
     public:
         List();
+        ~List();
         void insert(std::string data);
         std::string toString();
 

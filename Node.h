@@ -2,6 +2,7 @@
 #include <string>
 class Node{
     private:
+        int value;
         std::string data;
         Node *next;
 
@@ -13,7 +14,15 @@ class Node{
         void setData(std::string data);
         void setNext(Node* next);
 
+        Node(int value);
+        Node(int value, Node *next);
+
+        void setData(int value);
+        void setNext(Node *next);
+
         std::string getData();
+        int getValue();
+
         Node *getNext();
 
 

@@ -5,7 +5,18 @@ List::List(){
     head = nullptr;
 }
 
-void List::insert(std::string data){
+List::~List()
+{
+    Node *walker = head;
+    while (walker != nullptr)
+    {
+        delete walker;
+        walker = walker->getNext();
+    }
+}
+
+void List::insert(std::string data)
+{
     //create a new node
     Node *new_node = new Node(data);
 
