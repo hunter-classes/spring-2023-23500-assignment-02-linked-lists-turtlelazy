@@ -6,7 +6,6 @@ class OList
 {
 private:
     Node *head;
-    Node *tail;
 
 public:
     OList();
@@ -16,4 +15,6 @@ public:
 
     bool contains(int item);
     void remove(int loc);
+    int get(int loc);
+    void reverse();
 };

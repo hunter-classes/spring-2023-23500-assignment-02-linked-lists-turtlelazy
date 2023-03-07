@@ -18,7 +18,6 @@ class Node{
         Node(int value, Node *next);
 
         void setData(int value);
-        void setNext(Node *next);
 
         std::string getData();
         int getValue();

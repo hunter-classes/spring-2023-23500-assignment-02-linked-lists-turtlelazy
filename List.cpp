@@ -8,10 +8,12 @@ List::List(){
 List::~List()
 {
     Node *walker = head;
+    Node *trailer = nullptr;
     while (walker != nullptr)
     {
-        delete walker;
+        trailer = walker;
         walker = walker->getNext();
+        delete trailer;
     }
 }
 
