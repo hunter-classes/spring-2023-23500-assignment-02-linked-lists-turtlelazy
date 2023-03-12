@@ -87,6 +87,11 @@ void OList::remove(int loc)
         head = next;
         return;
     }
+    else if(loc == 0 && head!=nullptr){
+        delete head;
+        head = nullptr;
+        return;
+    }
 
     Node *walker = head;
     Node *prev;
